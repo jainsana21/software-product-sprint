@@ -1,27 +1,90 @@
 
-#greeting-container {
+
+body {
+  font-family: Arial;
+  padding: 10px;
+  background: #f1f1f1;
+}
+
+.header {
+    background-color: #CAFAFE;
+    text-align:center;
+    padding: 20px;
+}
+
+.header h1 {
+  font-size: 50px;
+}
+
+.topnav{
+    overflow: hidden;
+    background-color:#f2f2f2;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #000000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.leftcolumn {
+    float: left;
+    width:75% 
+}
+
+.rightcolumn {
+    float: left;
+    width:25% 
+    background-color #ddd;
+    padding-left: 20px;
+}
+
+.img {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+.card {
+  background-color: white;
+  padding: 20px;
   margin-top: 20px;
 }
 
-.sidebar { 
-  height: 100%; /* Full-height: remove this if you want "auto" height */
-  width: 400px; /* Set the width of the sidebar */
-  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-  z-index: 1; /* Stay on top */
-  top: 0; /* Stay at the top */
-  left: 0;
-  background-color: #B0E0E6; /* Black */
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 20px;
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
-div.content {
-  margin-left: 400px; /* Same as the width of the sidebar */
-  padding: 0px 10px;
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
 }
 
-div.main {
-    margin-left: 400px; /* Same as the width of the sidebar */
-    padding: 0px 10px;
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
 }
+
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+
+
 
