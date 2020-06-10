@@ -1,6 +1,6 @@
 # Google Software Product Sprint
 
-This repo contains the projects you'll work on throughout SPS.
+This repo contains Sana Jain's portfolio and SPS Project.
 
 To get started:
 

@@ -1,9 +1,95 @@
-#content {
-  margin-left: auto;
-  margin-right: auto;
-  width: 650px;
+
+* {
+    box-sizing:border-box;
 }
 
-#greeting-container {
+body {
+  font-family: Arial;
+  padding: 10px;
+  background: #f1f1f1;
+}
+
+.header {
+    background-color: #CAFAFE;
+    text-align:center;
+    padding: 30px;
+}
+
+.header h1 {
+  font-size: 50px;
+}
+
+.topnav{
+    overflow: hidden;
+    background-color:#f2f2f2;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #000000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.leftcolumn {
+    float: left;
+    width: 65%;
+}
+
+.rightcolumn {
+    float: left;
+    width: 35%;
+    background-color: #f1f1f1;
+    padding-left: 20px;
+    overflow: hidden;
+}
+
+.pic {
+    padding: 20px;
+    max-height: 100%;
+    max-width: 100%;
+    overflow:hidden;
+}
+
+.card {
+  background-color: white;
+  padding: 20px;
   margin-top: 20px;
 }
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+
+
+
