@@ -33,11 +33,15 @@ private ArrayList<String> messages;
     @Override
     public void init() {
         messages = new ArrayList<>();
-        messages.add("Hello!");
-        messages.add("My name is Sana");
-        messages.add("I am 20 years old!");
   }
-
+  
+  @Override 
+  public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    // Get the input from the form.
+    String text = request.getParameter("text-input");
+    messages.add(text);
+    System.out.println(messages);
+  }
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
@@ -49,7 +53,7 @@ private ArrayList<String> messages;
     response.getWriter().println(json);
   }
 
-  private String convertToJsonUsingGson(ArrayList serverStats) {
+  private String convertToJsonUsingGson(ArrayList data) {
     Gson gson = new Gson();
     String json = gson.toJson(messages);
     return json;
