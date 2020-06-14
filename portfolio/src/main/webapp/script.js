@@ -28,8 +28,9 @@ function addRandomGreeting() {
 }
 
 async function getData() {
- fetch('/data').then(response => response.json()).then((data) => {
-      console.log(data);
-      document.getElementById('data-container').innerText = data;
-});
+  const response = await fetch('/data');
+  const Data = await response.json();
+//   const urlData = await response.text();
+  console.log(Data);
+  document.getElementById("data-container").innerText = Data;
 }
