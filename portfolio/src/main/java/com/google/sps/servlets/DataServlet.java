@@ -47,7 +47,6 @@ private ArrayList<String> messages;
     String text = request.getParameter("text-input");
     long time = System.currentTimeMillis(); 
     messages.add(text);
-    System.out.println(messages); 
 
     Entity taskEntity = new Entity("Task");
     taskEntity.setProperty("text", text);
@@ -68,18 +67,10 @@ private ArrayList<String> messages;
     Query query = new Query("text").addSort("time", SortDirection.DESCENDING);
     DatastoreService datastore = DatastoreServiceFactory.getDatastoreService(); 
     PreparedQuery results = datastore.prepare(query);
-
-    ArrayList<String> messages = new ArrayList<>(); 
-    for (Entity entity : results.asIterable()) {
-      long id = entity.getKey().getId();
-      String text = (String) entity.getProperty("text");
-      long timestamp = (long) entity.getProperty("time");
-    }
-  }
+}
 
   private String convertToJsonUsingGson(ArrayList data) {
     Gson gson = new Gson();
-    String json = gson.toJson(messages);
-    return json;
+    return gson.toJson(messages);
   }
 }
