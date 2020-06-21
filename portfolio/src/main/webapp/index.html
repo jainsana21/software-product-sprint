@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Sana Jain</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBYT-pueWba_E6oLYsoj6UyCp5jzS_-Pw"></script>
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="style.css">
   </head>
 
 <body>
@@ -50,7 +50,17 @@
         <div class = "card">
             <h2> INTERESTS </h2> 
             <p> I love travelling and exploring different countries. While at home I enjoy swimming, biking, spending times with friends, and learning how to paint! </p>
+            <body onload= "initMap()">
+            <p> Zoom out on the map below to see some of the places I would love to travel to in the future! My Travel BucketList: </p>
+            <div id="map"></div>
         </div> 
+    </div> 
+
+    <div class = "rightcolumn">
+        <div class = "card"> 
+            <div class = "pic">
+                <img src = "Images/Pic01.png" </>
+        </div>
         <div class = "card">
             <h2> Comments </h2> 
             <form action = "/data" method = "POST">
@@ -62,15 +72,8 @@
             <body onload= getData()>
             <div id="data-container"></div>
         </div>
-    </div> 
-
-
-    <div class = "rightcolumn">
-        <div class = "card"> 
-            <div class = "pic">
-                <img src = "Images/Pic01.png" </>
-        </div>
     </div>
+
 </body>
 </html>
 

@@ -97,5 +97,11 @@ body {
   }
 }
 
+#map {
+  border: thin solid black;
+  height: 500px;
+  width: 800px;
+}
+
 
 
