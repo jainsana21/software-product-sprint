@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Sana Jain</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBYT-pueWba_E6oLYsoj6UyCp5jzS_-Pw"></script>
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="style.css">
   </head>
 
 <body>
@@ -23,8 +23,6 @@
     <div class = "leftcolumn"> 
         <div class = "card">
             <h2> ABOUT ME </h2>
-            <button onclick="getData()">Fetch my name</button>
-            <div id="data-container"></div>
             <p> Welcome! I'm Sana and I am currently studying Nanotechnology Engineering at the University of Waterloo. I am most interested in the applications of nanotechnology in the fields of electrical and materials engineering. My past work opportunities have been quite diverse and unique. My experiences range from working in a research lab in Germany to interning at an engineering consulting firm in Toronto. That's just the start keep scrolling to learn even more about my experiences and interests! </p>
         </div>
         <div class = "card"> 
@@ -52,7 +50,10 @@
         <div class = "card">
             <h2> INTERESTS </h2> 
             <p> I love travelling and exploring different countries. While at home I enjoy swimming, biking, spending times with friends, and learning how to paint! </p>
-        </div>
+            <body onload= "initMap()">
+            <p> Zoom out on the map below to see some of the places I would love to travel to in the future! My Travel BucketList: </p>
+            <div id="map"></div>
+        </div> 
     </div> 
 
     <div class = "rightcolumn">
@@ -60,7 +61,19 @@
             <div class = "pic">
                 <img src = "Images/Pic01.png" </>
         </div>
+        <div class = "card">
+            <h2> Comments </h2> 
+            <form action = "/data" method = "POST">
+            <textarea name="text-input"> Enter a comment here </textarea>
+            <br> </br>
+            <input type = "submit" />
+            </form>
+            <br> </br>
+            <body onload= getData()>
+            <div id="data-container"></div>
+        </div>
     </div>
+
 </body>
 </html>
 
